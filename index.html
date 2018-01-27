@@ -38,7 +38,7 @@ var myAudio = document.querySelector('audio');
 var myScript = document.querySelector('script');
 
 
-var mute-noise = document.querySelector('.mute-noise');
+var mute_noise = document.querySelector('.mute-noise');
 var targetAtTimeMinus = document.querySelector('.set-target-at-time-minus');
 var linearRampPlus = document.querySelector('.linear-ramp-plus');
 var linearRampMinus = document.querySelector('.linear-ramp-minus');
@@ -62,7 +62,7 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
-mute-noise.onclick = function() {
+mute_noise.onclick = function() {
   gainNode.gain.linearRampToValueAtTime(0.1, audioCtx.currentTime + 1);
   gainNode.gain.linearRampToValueAtTime(.5, audioCtx.currentTime + 5);
 }
